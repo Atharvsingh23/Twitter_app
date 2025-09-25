@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐦 Twitter Clone
 
-## Getting Started
+A full-stack Twitter clone built with **React.js**, **MongoDB**, and **Tailwind CSS**.  
+This project mimics core Twitter features like posting tweets, user authentication, likes, and responsive design.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 🚀 Features
+- 🔐 User Authentication (Signup/Login)
+- 📝 Post Tweets with text & media
+- ❤️ Like & Unlike tweets
+- 👤 User Profile with bio & posts
+- 📱 Responsive UI using Tailwind CSS
+- 🌐 REST API with MongoDB backend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (Mongoose ODM)
+- **Authentication:** JWT (JSON Web Tokens)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📂 Project Structure
+twitter-clone/
+│── client/ # React.js frontend
+│ ├── src/
+│ │ ├── components/ # Reusable UI components
+│ │ ├── pages/ # App pages (Home, Profile, Login, etc.)
+│ │ ├── App.js
+│ │ └── index.js
+│── server/ # Express backend
+│ ├── models/ # MongoDB models
+│ ├── routes/ # API routes
+│ ├── controllers/ # Request handlers
+│ └── server.js
+│── package.json
+│── README.md
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install dependencies
+Frontend
+cd client
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Backend
+cd ../server
+npm install
 
-## Deploy on Vercel
+Setup Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a .env file inside the server folder:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+
+ Run the project
+Start Backend
+cd server
+npm start
+
+Start Frontend
+cd client
+npm start
